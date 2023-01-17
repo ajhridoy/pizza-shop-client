@@ -1,0 +1,104 @@
+[
+    {
+     "name": "Pepper Barbecue Chicken",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 20,
+        "Medium": 35,
+        "Large": 40
+       }
+     ],
+     "category": "nonveg",
+     "img": "https://media.istockphoto.com/id/1340589333/photo/homemade-indian-chicken-tikka-masala-pizza.jpg?b=1&s=170667a&w=0&k=20&c=C3VC4zOkie0p06V5W7f6JJvZSBiDgqX1nz0J1uqVu3M=",
+     "description": ""
+    },
+    {
+     "name": "Non Veg Supreme Gold",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 25,
+        "Medium": 30,
+        "Large": 43
+       }
+     ],
+     "category": "nonvege",
+     "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
+     "description": ""
+    },
+    {
+     "name": "Golden Corn Pizza Special",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 15,
+        "Medium": 25,
+        "Large": 32
+       }
+     ],
+     "category": "veg",
+     "img": "https://thumbs.dreamstime.com/b/hawaiian-pizza-freshly-made-mmmm-49611709.jpg",
+     "description": ""
+    },
+    {
+     "name": "Jalapeno Paprica Pizza",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 30,
+        "Medium": 45,
+        "Large": 50
+       }
+     ],
+     "category": "veg",
+     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgntOEKS67JHvDdqeY50gfSqtG_s2inmhuMw&usqp=CAU",
+     "description": ""
+    },
+    {
+     "name": "Mergarita Gold Pizza",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 35,
+        "Medium": 50,
+        "Large": 60
+       }
+     ],
+     "category": "veg",
+     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVBGzMSpVsGOiR6N7wvgTNnTXOp1yYcYwXw&usqp=CAU",
+     "description": ""
+    },
+    {
+     "name": "Doubble Margarita Pizza",
+     "varients": [
+        "small",
+        "Medium",
+        "Large"
+     ],
+     "prices": [
+        {"small": 50,
+        "Medium": 65,
+        "Large": 90
+       }
+     ],
+     "category": "veg",
+     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK9X7fMN_BbvWAnV4uW2-sCck8bQAm4_MlwA&usqp=CAU",
+     "description": ""
+    }
+]
