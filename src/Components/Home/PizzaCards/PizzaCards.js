@@ -17,10 +17,10 @@ const PizzaCards = () => {
     console.log(pizzas)
     return (
         <div>
-           <div className="row">
+           <div className="row justify-content-center">
             {loading ? (<h1>Loading..</h1>) : error ? (<h1>Somthing went wrong</h1>) : (
                 pizzas.map(pizza => {
-                    return <div className="col-md-4">
+                    return <div className="col-md-3 m-3">
                         <div>
                             <PizzaCard key={pizza._id} pizza={pizza}></PizzaCard>
                         </div>

@@ -3,11 +3,19 @@ import { createStore , applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { getPizzaReducer } from './reducer/pizzaReducer';
+import { cartReducer } from './reducer/cartReducer';
 
 const finalReducer = combineReducers({
-    getPizzaReducer : getPizzaReducer
+    getPizzaReducer : getPizzaReducer,
+    cartReducer : cartReducer
 })
-const initialState = {}
+
+const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+const initialState = {
+    cartReducer : {
+        cartItems : cartItems
+    }
+}
 
 const composeEnhancer = composeWithDevTools({})
 
