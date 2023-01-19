@@ -34,3 +34,13 @@ select{
   box-shadow: none !important;
   border-color: black !important;
 }
+.plus{
+  color: green;
+  margin: 5px;
+  cursor: pointer;
+}
+.minus{
+  color: red;
+  margin: 5px;
+  cursor: pointer;
+}
