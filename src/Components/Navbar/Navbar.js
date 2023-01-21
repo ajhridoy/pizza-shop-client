@@ -1,12 +1,17 @@
 import React from "react";
+import { Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const cartState = useSelector(state => state.cartReducer)
+  const cartState = useSelector((state) => state.cartReducer);
+  const userState = useSelector((state) => state.loginUserReducer);
+  const { currentUser } = userState;
   return (
-    <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
-      <Link className="navbar-brand" to='/'>
+    <div>
+      <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
+      <div className="container-fluid">
+      <Link className="navbar-brand" to="/">
         Pizza Tong
       </Link>
       <button
@@ -23,23 +28,38 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <Link className="nav-link" to='/'>
+            <Link className="nav-link" to="/">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="login">
-              Login
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to='cart'>
+            <Link className="nav-link" to="cart">
               Cart {cartState.cartItems.length}
             </Link>
           </li>
+          {currentUser ? (
+                <Dropdown>
+                <Dropdown.Toggle variant="success"  id="dropdown-basic">
+                  {currentUser.name}
+                </Dropdown.Toggle>
+          
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-2">Orders</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+          ) : (
+            <li className="nav-item">
+              <Link className="nav-link" to="login">
+                Login
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
+      </div>
     </nav>
+    </div>
   );
 };
 

@@ -1,11 +1,12 @@
 import './App.css';
 import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './Components/Navbar/Navbar';
+import 'bootstrap'
 import Home from './Components/Home/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layouts/Main';
 import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 function App() {
   const router = createBrowserRouter([
@@ -24,6 +25,10 @@ function App() {
         {
           path: '/login',
           element: <Login></Login>
+        },
+        {
+          path: '/register',
+          element: <Register></Register>
         },
       ]
     }

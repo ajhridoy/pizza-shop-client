@@ -44,3 +44,7 @@ select{
   margin: 5px;
   cursor: pointer;
 }
+input{
+  margin-top: 10px !important;
+  box-shadow: none !important; 
+}
