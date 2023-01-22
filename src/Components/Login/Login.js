@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { loginUser } from '../../action/userAction';
+import { loginUserReducer } from '../../reducer/userReducer';
+import Error from '../Error/Error';
+import Loading from '../Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const loginstate = useSelector((state) => state.loginUserReducer);
-  const { error, loading } = loginstate;
+  const loginState = useSelector((state) => state.loginUserReducer);
+  const { error, loading } = loginState;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,8 +33,8 @@ const Login = () => {
           <h2 className='text-center' style={{ fontSize: '35px' }}>
             Login
           </h2>
-          {/* {loading && <Loading />}
-          {error && <Error error='Invalid Creentials' />} */}
+          {loading && <Loading></Loading>}
+          {error && <Error error='Invalid Credentials'></Error>}
           <div>
             <input
               type='text'
@@ -56,9 +60,9 @@ const Login = () => {
             <button className='btn mt-3 mb-3' onClick={login}>
               LOGIN
             </button>
-            <a className='nav-link' href='/register'>
+            <Link className='nav-link' to='/register'>
               Click Here To Register
-            </a>
+            </Link>
           </div>
         </div>
       </div>

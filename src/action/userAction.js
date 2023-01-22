@@ -25,7 +25,7 @@ export const loginUser = (user) => async (dispatch) => {
     }
   };
   
-//   export const logoutUser = () => (dispatch) => {
-//     localStorage.removeItem('currentUser');
-//     window.location.href = '/login';
-//   };
+  export const logoutUser = () => (dispatch) => {
+    localStorage.removeItem('currentUser');
+    window.location.href = '/login';
+  };

@@ -1,12 +1,14 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { logoutUser } from "../../action/userAction";
 
 const Navbar = () => {
   const cartState = useSelector((state) => state.cartReducer);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
+  const dispatch = useDispatch()
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
@@ -45,7 +47,7 @@ const Navbar = () => {
           
                 <Dropdown.Menu>
                   <Dropdown.Item href="#/action-2">Orders</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3" onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
           ) : (

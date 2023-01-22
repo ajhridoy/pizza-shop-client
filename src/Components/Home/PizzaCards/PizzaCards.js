@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllPizzas } from '../../../action/pIzzaAction';
 import PizzaCard from './PizzaCard';
 import { getPizzaReducer } from '../../../reducer/pizzaReducer';
+import Loading from '../../Loading/Loading';
+import Error from '../../Error/Error';
 
 const PizzaCards = () => {
    const dispatch = useDispatch()
@@ -18,7 +20,7 @@ const PizzaCards = () => {
     return (
         <div>
            <div className="row justify-content-center">
-            {loading ? (<h1>Loading..</h1>) : error ? (<h1>Somthing went wrong</h1>) : (
+            {loading ? (<Loading></Loading>) : error ? (<Error error='Something Went Wrong'></Error>) : (
                 pizzas.map(pizza => {
                     return <div className="col-md-3 m-3">
                         <div>
