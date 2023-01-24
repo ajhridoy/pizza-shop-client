@@ -7,6 +7,7 @@ import Main from './Layouts/Main';
 import Cart from './Components/Cart/Cart';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Orders from './Components/Cart/Orders/Orders';
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +30,10 @@ function App() {
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '/orders',
+          element: <Orders></Orders>
         },
       ]
     }

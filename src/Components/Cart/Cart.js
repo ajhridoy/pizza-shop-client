@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 import { addToCart, deleteFromCart } from '../../action/cartAction';
+import CheackOut from '../CheackOut/CheackOut';
 
 const Cart = () => {
     const cartState = useSelector(state => state.cartReducer)
@@ -36,7 +37,7 @@ const Cart = () => {
             </div>
             <div className='col-md-4 text-end'>
                 <h2 style={{fontSize: '45px'}}>Subtotal: ${subTotal}</h2>
-                <button className='btn'>Check Out</button>
+                <CheackOut subTotal={subTotal}></CheackOut>
             </div>
           </div> 
         </div>
